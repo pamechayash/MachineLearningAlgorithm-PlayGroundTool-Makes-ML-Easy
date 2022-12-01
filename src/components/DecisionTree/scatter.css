@@ -1,0 +1,105 @@
+@import url('https://fonts.cdnfonts.com/css/verdana');
+.ScatterCont{
+    display:"flex";
+  
+
+    align-items:'center';
+    justify-content:'center';
+   position: relative;
+   top:0
+
+  
+
+}
+.visual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+    margin: 10px;
+    border: 1px solid greenyellow;
+}
+.hyperCont{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    width: 100vw;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+.btn-two {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative; 
+    height: 100px;
+    width: 300px;
+    font-size: 1.5rem;
+    background-color: black;
+  }
+  .btn-two span {
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+  }
+  .btn-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  .btn-two:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  
+  .confusion{
+      margin:100px;
+     border: 2px solid grey;
+     box-shadow: 2px 2px 20px 5px rgb(74, 75, 77);
+
+  }
+  .internal{
+   
+    height:150px;
+    width:150px;
+  
+    display:flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 3rem;
+ font-weight: bolder;
+ color:rgb(8, 5, 5);
+   font-family: Verdana;
+
+   border: 2px solid black;
+  }
+  .cls{
+      display: flex;
+  
+  }

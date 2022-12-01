@@ -1,0 +1,11 @@
+
+.cont{
+  width: 80vw;
+  height:fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+color: greenyellow;
+  background-color: rgba(209, 163, 111, 0.2);
+border-radius: 5%;
+}

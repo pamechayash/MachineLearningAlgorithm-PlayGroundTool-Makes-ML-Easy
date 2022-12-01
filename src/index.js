@@ -1,17 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './index.css';
+import Knn from './components/Knn/Knn';
+import MainScreen from './components/MainScreen/mainscreen';
+import SVM from './components/SVM/svm';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Regularisation from './components/RidgeReg/RidgeReg';
+import LinearReg from './components/LinearReg/LinearReg';
+import Decision from './components/DecisionTree/decision';
+import DecisionTreeReg from './components/DecisionTree/DtreeReg';
+import LogReg from './components/LogisticReg/LogisticRegression';
+import RanForest from './components/RanForest/RanForest';
+import RanForestReg from './components/RanForest/RanForestReg';
+import Lasso from './components/RidgeReg/Lasso';
+import RidgeReg from './components/RidgeReg/RidgeReg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<MainScreen />} /> 
+      <Route path="/App" element={<App />} /> 
+    
+    <Route path="/Decision" element={<Decision />}/>
+    <Route path="/DecisionTreeReg" element={<DecisionTreeReg />}/>
+    <Route path="/LogReg" element={<LogReg />}/>
+    <Route path="/LinearReg" element={<LinearReg />}/>
+    <Route path="/Ridge" element={<RidgeReg />}/>
+    <Route path="/SVM" element={<SVM />}/>
+    <Route path="/LassoReg" element={<Lasso/>}/>
+  <Route  path='/RanForest' element={<RanForest/>}/>
+  <Route  path='/RanForestReg' element={<RanForestReg/>}/>
+  <Route  path='/Knn' element={<Knn/>}/>
+    </Routes>
+    </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
